@@ -1,0 +1,33 @@
+:root {
+  --border-img: rgba(120, 120, 120, .6);
+body {
+}
+header {
+}
+h1 {
+  text-align: center; }
+main {
+}
+p {
+  margin-inline: 2.5%; }
+.p-center {
+  text-align: center; }
+footer {
+  height: 10%;
+  background: red;
+}
+.center {
+  width: fit-content;
+  margin: 3em auto; }
+
+.center img {
+  border: 2px solid var(--border-img);
+  padding: 2em; }
+.important {
+  text-decoration: underline;
+  font-weight: 600;}
+@media (orientation: landscape) {
+  body {
+    max-width: 80%;
+    margin-inline: 10%;}
+  }
