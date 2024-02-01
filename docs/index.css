@@ -13,7 +13,8 @@ menu {
   list-style: none;
   margin: 0;
   padding: 0; }    
-main { }
+main {
+  --max-main: 920px; }
 p {
   margin-inline: 2.5%; }
 .p-center {
@@ -44,6 +45,8 @@ footer {
     place-items: center;
   }
   nav {  }
+  main {
+    max-width: var(--max-main);}
 }
 @media (width < 38rem) {
     .center {
