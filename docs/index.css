@@ -43,6 +43,8 @@ footer {
     height: fit-content;
     display: grid;
     place-items: center;
+    position: sticky;
+    top: 10%;
   }
   nav {  }
   main {
