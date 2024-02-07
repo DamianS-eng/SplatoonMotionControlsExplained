@@ -7,11 +7,26 @@
     <link rel="stylesheet" href="./docs/index.css">
     <link rel="shortcut icon" type="image/x-icon" href="./docs/favicon.ico">
     <link rel="icon" type="image/x-icon" href="./docs/animated_favicon.ico">
-   <script>
+   <script src="docs/index.js" defer>
+     function nav(btn-func) {
+       if (btn-func == "sidenav-open") {
+         console.log("open pressed");
+         return;
+       }
+       console.log("close pressed.");
+     };
    </script> 
   </head>
   <body>
     <header>
+      <div id="sidenav" open="true">
+        <button id="sidenav-close" onclick="nav(this.id)">
+          <img src="imgs/sidenav-open.png" alt="<" />
+        </button>
+      </div>
+      <button id="sidenav-open" onclick="nav(this.id)">
+        <img src="imgs/sidenav-open.png" alt=">" />
+      </button>
       <h1>Explaining the Motion Controls in Splatoon 3</h1>
     </header>
     <div class="wrapper">
