@@ -1,4 +1,4 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,22 +7,41 @@
     <link rel="stylesheet" href="./docs/index.css">
     <link rel="shortcut icon" type="image/x-icon" href="./docs/favicon.ico">
     <link rel="icon" type="image/x-icon" href="./docs/animated_favicon.ico">
-   <script src="docs/index.js" defer>
-     function nav(btn-func) {
-       if (btn-func == "sidenav-open") {
-         console.log("open pressed");
-         return;
-       }
-       console.log("close pressed.");
-     };
-   </script> 
+		<script src="docs/index.js" defer>
+		</script> 
+		 <script defer >
+					function nav(btn_func) {
+						if (btn_func == "sidenav-open") {
+							console.log("open pressed");
+							sidenav.removeAttribute("closed");
+							header.setAttribute("open", true);
+							return;
+							}
+						console.log("close pressed.");
+						sidenav.setAttribute("closed", true);
+						header.removeAttribute("open");
+						
+					}
+		 </script>
   </head>
   <body>
     <header>
-      <div id="sidenav" open="true">
+      <div id="sidenav" closed="true">
         <button id="sidenav-close" onclick="nav(this.id)">
           <img src="imgs/sidenav-open.png" alt="<" />
         </button>
+				<nav>
+					<menu>
+						<li><a href="#">What's wrong with sticks?</a></li>
+						<li><a href="#">About Motion</a></li>
+						<li><a href="#">How to hold?</a></li>
+						<li><a href="#">The Best Settings</a></li>
+						<li><a href="#">What does the Y button do?</a></li>
+						<li><a href="#">What is calibrate?</a></li>
+						<li><a href="#">For Beginners</a></li>
+						<li><a href="#">References</a></li>
+					</menu>
+				</nav>
       </div>
       <button id="sidenav-open" onclick="nav(this.id)">
         <img src="imgs/sidenav-open.png" alt=">" />

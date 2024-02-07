@@ -1,22 +1,44 @@
 :root {
   --border-img: rgba(120, 120, 120, .6); }
 body {
+	position: relative;
 }
-header {
+header > #sidenav, #sidenav-open {
+	position: fixed;
+	top: 2rem;
+	left: 1rem;	
+}
+header[open] > #sidenav-open {
+	display: none;
 }
 #sidenav {
+	background: rgb(210, 210, 210);
+	padding: .5rem;
+	border: 2px dotted rgba(150, 150, 150, .3);
+}
+#sidenav > * {
+	display: inherit;
+}
+#sidenav[closed] {
+	display: none;
 }
 #sidenav-open, #sidenav-close {
 }
 h1 {
   text-align: center; 
 }
+button:hover {
+	cursor: pointer }
 .wrapper {
-    display: grid; }
+  display: grid; }
+.wrapper > nav {
+	display: none; }
 menu {  
   list-style: none;
   margin: 0;
-  padding: 0; }    
+  padding: 0; }
+menu li + li {
+  margin-top: .625rem; }
 main {
   --max-main: 920px; }
 p {
@@ -45,9 +67,14 @@ footer {
     grid-template-columns: 20% 1fr;
     grid-gap: 3rem;
   }
+	.wrapper > nav {
+		display: inherit;
+	}
   menu {
     border: 2px solid silver;
     height: fit-content;
+		position: sticky;
+    top: 10%;
     display: grid;
     place-items: center;
   }
