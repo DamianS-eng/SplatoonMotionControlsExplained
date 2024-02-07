@@ -4,6 +4,10 @@ body {
 }
 header {
 }
+#sidenav {
+}
+#sidenav-open, #sidenav-close {
+}
 h1 {
   text-align: center; 
 }
@@ -34,6 +38,9 @@ footer {
   text-decoration: underline;
   font-weight: 600;}
 @media (orientation: landscape) {
+  #sidenav, #sidenav-open {
+    display: none;
+  }
   .wrapper {
     grid-template-columns: 20% 1fr;
     grid-gap: 3rem;
