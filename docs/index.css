@@ -1,5 +1,8 @@
 :root {
   --border-img: rgba(120, 120, 120, .6); }
+html, body {
+  line-height: 1.6;
+}
 body {
 }
 header {
@@ -8,20 +11,21 @@ h1 {
   text-align: center; 
 }
 .wrapper {
-    display: grid; }
+  display: grid; }
 menu {  
   list-style: none;
   margin: 0;
   padding: 0; }    
 main {
-  --max-main: 920px; }
+  --max-main: 80ch; 
+  margin: auto;
+}
 p {
   margin-inline: 2.5%; }
 .p-center {
-  text-align: center; 
-}
+  text-align: center; }
 footer {
-  height: 10%;
+  min-height: 10%;
   background: red;
 }
 .center {
@@ -39,12 +43,16 @@ footer {
     grid-gap: 3rem;
   }
   menu {
-    border: 2px solid silver;
+    box-shadow: 0 .1rem .5rem silver;
     height: fit-content;
     display: grid;
-    place-items: center;
+    place-items: start;
   }
-  nav {  }
+  menu li {
+    margin-left: 2ch;
+  }
+  nav { 
+    position: sticky;top: 2ch;height: fit-content;}
   main {
     max-width: var(--max-main);}
 }
