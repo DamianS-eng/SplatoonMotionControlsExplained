@@ -30,13 +30,16 @@ footer {
 }
 .center {
   width: fit-content;
-  margin: 3em auto; }
+  margin: 3em auto; 
+}
 .center img {
   border: 2px solid var(--border-img);
-  padding: 2em; }
+  padding: 2em; 
+}
 .important {
   text-decoration: underline;
-  font-weight: 600;}
+  font-weight: 600;
+}
 @media (orientation: landscape) {
   .wrapper {
     grid-template-columns: 20% 1fr;
@@ -46,15 +49,21 @@ footer {
     box-shadow: 0 .1rem .5rem silver;
     height: fit-content;
     display: grid;
+    position: sticky;
+    top: 2ch;
     place-items: start;
   }
   menu li {
     margin-left: 2ch;
   }
   nav { 
-    position: sticky;top: 2ch;height: fit-content;}
+    position: sticky;
+    top: 2ch;
+    height: fit-content;
+  }
   main {
-    max-width: var(--max-main);}
+    max-width: var(--max-main);
+  }
 }
 @media (width < 38rem) {
     .center {
