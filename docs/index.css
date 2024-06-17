@@ -1,5 +1,8 @@
 :root {
   --border-img: rgba(120, 120, 120, .6); }
+html, body {
+  line-height: 1.6;
+}
 body {
 	position: relative;
 }
@@ -40,25 +43,29 @@ menu {
 menu li + li {
   margin-top: .625rem; }
 main {
-  --max-main: 920px; }
+  --max-main: 80ch; 
+  margin: auto;
+}
 p {
   margin-inline: 2.5%; }
 .p-center {
-  text-align: center; 
-}
+  text-align: center; }
 footer {
-  height: 10%;
+  min-height: 10%;
   background: red;
 }
 .center {
   width: fit-content;
-  margin: 3em auto; }
+  margin: 3em auto; 
+}
 .center img {
   border: 2px solid var(--border-img);
-  padding: 2em; }
+  padding: 2em; 
+}
 .important {
   text-decoration: underline;
-  font-weight: 600;}
+  font-weight: 600;
+}
 @media (orientation: landscape) {
   #sidenav, #sidenav-open {
     display: none;
@@ -71,16 +78,27 @@ footer {
 		display: inherit;
 	}
   menu {
-    border: 2px solid silver;
-    height: fit-content;
+    box-shadow: 0 .1rem .5rem silver;
+    /*
 		position: sticky;
-    top: 10%;
+    top: 2ch;
+    height: fit-content;
+    */
     display: grid;
-    place-items: center;
+    position: sticky;
+    place-items: start;
   }
-  nav {  }
+  menu li {
+    margin-left: 2ch;
+  }
+  nav { 
+    position: sticky;
+    top: 2ch;
+    height: fit-content;
+  }
   main {
-    max-width: var(--max-main);}
+    max-width: var(--max-main);
+  }
 }
 @media (width < 38rem) {
     .center {
